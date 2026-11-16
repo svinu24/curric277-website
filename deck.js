@@ -37,7 +37,9 @@
 
   /* ---------- Fragments ---------- */
 
-  const stepsOf = (slide) => Array.from(slide.querySelectorAll(".frag, .step"));
+  // DOM order by default; data-order="-1" (etc.) lets a step jump the queue.
+  const stepsOf = (slide) => Array.from(slide.querySelectorAll(".frag, .step"))
+    .sort((a, b) => (Number(a.dataset.order) || 0) - (Number(b.dataset.order) || 0));
   const shownCount = (slide) => stepsOf(slide).filter((el) => el.classList.contains("shown")).length;
 
   function setSteps(slide, count) {
@@ -114,7 +116,7 @@
   /* ---------- Input ---------- */
 
   document.addEventListener("keydown", (e) => {
-    if (e.target.closest("input, textarea, [contenteditable]")) return;
+    if (e.target.closest?.("input, textarea, [contenteditable]")) return;
     if (e.metaKey || e.ctrlKey || e.altKey) return;
 
     switch (e.key) {
