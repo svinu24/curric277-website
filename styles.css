@@ -930,3 +930,74 @@ body.print { overflow: auto; height: auto; }
   color: var(--gold);
   background: var(--surface-2);
 }
+
+/* Definition tracker (top-right of the stage) */
+.tracker {
+  position: absolute;
+  top: 30px;
+  right: 60px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 5;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+}
+.tracker.visible { opacity: 1; transform: none; }
+.tracker-label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-right: 4px;
+}
+.tracker [data-s] {
+  font-family: var(--display);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(245, 235, 222, 0.25);
+  transition: all 0.4s ease;
+}
+.tracker [data-s].lit { color: var(--gold); border-color: var(--line); background: rgba(232, 181, 74, 0.06); }
+.tracker [data-s].current {
+  color: var(--bg);
+  background: var(--gold);
+  border-color: var(--gold);
+  box-shadow: 0 0 18px rgba(232, 181, 74, 0.55);
+}
+.print .tracker { display: none; }
+
+/* Sense slides */
+.sense-head { font-size: 76px; margin-bottom: 30px; }
+.sense-head span {
+  color: var(--gold);
+  text-shadow: 0 0 34px rgba(232, 181, 74, 0.35);
+}
+.sense .lede { font-size: 29px; }
+.sense ul.clean li { font-size: 26px; }
+.evidence { margin-bottom: 18px; padding: 22px 26px; }
+.evidence h3 { font-size: 26px; }
+.evidence p { font-size: 22px; }
+.beyond-note {
+  font-size: 21px;
+  color: var(--muted);
+  border-left: 3px solid var(--ember);
+  padding-left: 16px;
+  margin-top: 6px;
+}
+.beyond-note span {
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: var(--ember);
+  margin-right: 6px;
+}
+.small-quote { font-size: 23px; font-style: italic; }
+.small-quote span { font-style: normal; font-size: 18px; }

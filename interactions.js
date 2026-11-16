@@ -189,3 +189,27 @@
 
   render();
 })();
+
+/* ---------- Definition tracker ---------- */
+
+(() => {
+  const tracker = document.getElementById("tracker");
+  if (!tracker || !window.Deck || window.Deck.print) return;
+  const { slides } = window.Deck;
+  const chips = Array.from(tracker.querySelectorAll("[data-s]"));
+
+  function update(index) {
+    const slide = slides[index];
+    const reached = Math.max(0, ...slides.slice(0, index + 1).map((s) => Number(s.dataset.sense) || 0));
+    const current = Number(slide.dataset.sense) || 0;
+    tracker.classList.toggle("visible", current > 0 || slide.hasAttribute("data-tracker"));
+    chips.forEach((chip) => {
+      const n = Number(chip.dataset.s);
+      chip.classList.toggle("lit", n <= reached);
+      chip.classList.toggle("current", n === current);
+    });
+  }
+
+  document.addEventListener("deck:change", (e) => update(e.detail.index));
+  update(window.Deck.index);
+})();

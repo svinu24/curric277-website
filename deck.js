@@ -76,8 +76,9 @@
     progress.style.width = `${((index + 1) / slides.length) * 100}%`;
     counter.textContent = `${index + 1} / ${slides.length}`;
     if (location.hash !== `#${index + 1}`) history.replaceState(null, "", `#${index + 1}`);
-    document.title = `${slide.dataset.title || "Slide"} · Leet Noobs`;
+    document.title = `${slide.dataset.title || "Slide"} · Expertise`;
     renderNotes();
+    document.dispatchEvent(new CustomEvent("deck:change", { detail: { index, slide } }));
   }
 
   function next() {
