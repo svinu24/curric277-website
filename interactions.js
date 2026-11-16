@@ -63,4 +63,5 @@
   slide.addEventListener("slide:enter", play);
   slide.addEventListener("slide:leave", stop);
   slide.querySelector(".replay").addEventListener("click", play);
+  if (slide.classList.contains("active")) play(); // page opened directly on this slide
 })();

@@ -611,5 +611,7 @@ body.show-notes .notes-panel {
 .chat .druid { color: var(--druid); }
 .chat .warrior { color: var(--warrior); }
 .chat .shaman { color: var(--shaman); }
-.chat li:not(.yell):not(.sys) { color: #ff9d4d; }
-.chat li:not(.yell):not(.sys) .chan ~ * , .chat li .chan { color: var(--channel); }
+.chat li { color: #ff9d4d; }            /* raid-chat text is orange */
+.chat li.ch { color: var(--channel); }   /* custom channels are pink */
+.chat li.yell { color: var(--yell); }
+.chat li.sys { color: var(--system); }
