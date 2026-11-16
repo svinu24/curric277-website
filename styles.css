@@ -1001,3 +1001,8 @@ body.print { overflow: auto; height: auto; }
 }
 .small-quote { font-size: 23px; font-style: italic; }
 .small-quote span { font-style: normal; font-size: 18px; }
+
+/* Loot rewards line */
+.item-rewards { font-size: 18px; color: #cfd3e6; margin-top: 4px; }
+.item-rewards b { color: #1eff00; font-weight: 600; }
+.sense .ktm-effects li { font-size: 24px; }

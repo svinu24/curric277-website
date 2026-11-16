@@ -313,6 +313,149 @@
         </aside>
       </section>
 
+      <!-- ============================================================
+           10 · ACTIVITY — who has earned the epic?
+           ============================================================ -->
+      <section class="slide" data-title="Loot Vote" data-tracker>
+        <p class="kicker">Activity · Loot, merit, and expertise</p>
+        <h2>Golemagg drops one epic. Who has earned it?</h2>
+        <p class="lede muted vote-help">Every loot system is a theory of who deserves the reward. Which would your raid use? Vote with your hands.</p>
+        <div class="grid-4 loot-grid">
+          <button class="tooltip loot" data-loot="dkp">
+            <span class="item-name epic">DKP Auction</span>
+            <span class="item-type">Points system</span>
+            <span class="item-desc">Earn points for every boss you show up for, then bid them. Highest bid wins.</span>
+            <span class="item-rewards">Rewards: <b>showing up</b></span>
+            <span class="votes" aria-live="polite">0</span>
+          </button>
+          <button class="tooltip loot" data-loot="council">
+            <span class="item-name epic">Loot Council</span>
+            <span class="item-type">Leaders decide</span>
+            <span class="item-desc">Officers give it to whoever makes the <em>whole raid</em> strongest.</span>
+            <span class="item-rewards">Rewards: <b>skill, as leaders judge it</b></span>
+            <span class="votes" aria-live="polite">0</span>
+          </button>
+          <button class="tooltip loot" data-loot="roll">
+            <span class="item-name epic">Open Roll</span>
+            <span class="item-type">Pure chance</span>
+            <span class="item-desc">Everyone who wants it rolls 1–100. Highest roll wins.</span>
+            <span class="item-rewards">Rewards: <b>luck</b></span>
+            <span class="votes" aria-live="polite">0</span>
+          </button>
+          <button class="tooltip loot chen" data-loot="weighted">
+            <span class="item-name epic">Weighted Roll</span>
+            <span class="item-type">Seniority + luck</span>
+            <span class="item-desc">Roll 1–100 and the <strong>lowest</strong> roll wins. Each night without loot shrinks your range by 10.</span>
+            <span class="item-rewards">Rewards: <b>loyalty, plus luck</b></span>
+            <span class="votes" aria-live="polite">0</span>
+          </button>
+        </div>
+        <p class="hint-inline tally-hint">Click a card to add a vote · shift-click to undo</p>
+        <div class="card frag reveal">
+          <p><strong class="gold">What Chen's raid chose:</strong> the weighted roll, decided after three long forum threads. It doesn't reward the “best” players, on purpose: loot was <em>“an added bonus to the more valued experience itself.”</em> Chen compares grades to loot.</p>
+        </div>
+        <aside class="notes">
+          Read the four options and the "rewards" line on each, since that's the expertise
+          connection: each system defines merit differently. Take a show of hands for each and
+          click the cards to tally it. Then reveal Chen's choice. Most raids used DKP. Chen's group
+          picked a system that deliberately didn't reward skill alone, because the expertise they
+          valued was being a good member of the group. Seed for Q3: if grades are loot, what do
+          grades reward?
+        </aside>
+      </section>
+
+      <!-- ============================================================
+           11 · SENSE 5 — sociomaterial (the threat meter)
+           ============================================================ -->
+      <section class="slide sense" data-title="Expertise is sociomaterial" data-sense="5">
+        <p class="kicker">Sense 5 of 6 · Chapter 3: Assembling to Kill Ragnaros</p>
+        <h2 class="sense-head">Expertise is <span>sociomaterial</span>.</h2>
+        <div class="split grow">
+          <div>
+            <p class="lede">Expertise is <em>“not the ability to remember the exact numbers and ‘math’ underlying the game.”</em> It's the ability to arrange <strong>people and tools</strong> so the work gets shared.</p>
+            <ul class="clean ktm-effects">
+              <li class="frag">In March 2006 the raid adopted <strong>KTM</strong>, a fan-made add-on that showed everyone's threat in real time. Installing the raid's add-ons became <strong>required</strong> to join.</li>
+              <li class="frag">The leader stopped saying <em>“melee, watch your aggro”</em> and started calling out names: <em>“Roger!”</em></li>
+              <li class="frag">Trust moved from <strong>people</strong> to <strong>tools</strong>, and the meter doubled as <strong>surveillance</strong>.</li>
+            </ul>
+          </div>
+          <div class="ktm-wrap">
+            <div class="ktm step" data-order="-1" aria-label="KLH Threat Meter mock-up">
+              <div class="ktm-head">
+                <span>KLH Threat Meter</span>
+                <span class="ktm-mode"><span class="off">no add-on: guessing</span><span class="on">raid view</span></span>
+              </div>
+              <ol class="ktm-rows">
+                <li style="--w:100%; --c:var(--warrior)"><span class="who">Warren</span><span class="bar"><i></i></span><span class="val">100%</span></li>
+                <li style="--w:91%;  --c:var(--warrior)"><span class="who">Wendy</span><span class="bar"><i></i></span><span class="val">91%</span></li>
+                <li style="--w:64%;  --c:var(--rogue)"><span class="who">Roger</span><span class="bar"><i></i></span><span class="val">64%</span></li>
+                <li style="--w:58%;  --c:var(--rogue)"><span class="who">Thoguht</span><span class="bar"><i></i></span><span class="val">58%</span></li>
+                <li style="--w:51%;  --c:var(--mage)"><span class="who">Mandy</span><span class="bar"><i></i></span><span class="val">51%</span></li>
+                <li style="--w:39%;  --c:var(--hunter)"><span class="who">Hall</span><span class="bar"><i></i></span><span class="val">39%</span></li>
+              </ol>
+            </div>
+            <p class="caption">Modeled on Figure 5 in the book. Tanks Warren and Wendy hold the top spots, so the DPS can safely go all-out.</p>
+            <p class="beyond-note"><span>Today:</span> Raider.IO and Warcraft Logs scores. Groups check your numbers before they invite you.</p>
+          </div>
+        </div>
+        <aside class="notes">
+          Fifth sense, Chen's headline claim: expertise is spread across people AND things.
+          Press next once to "install" the add-on: the meter goes from question marks to live
+          bars. The tool now does thinking the players used to do in chat. Then reveal the
+          effects: more efficient, but trust shifted from people to the tool, and it doubled as
+          surveillance. Blizzard later built threat displays into the game itself.
+        </aside>
+      </section>
+
+      <!-- ============================================================
+           12 · EXPERTISE IN ACTION — the Ragnaros kill, replayed
+           ============================================================ -->
+      <section class="slide" data-title="Victory!" data-tracker>
+        <p class="kicker">Epilogue · Victory! · May 19, 2006</p>
+        <div class="split victory grow">
+          <div>
+            <h2>Collective expertise, in real time</h2>
+            <p class="lede">After seven months of wipes, here's the actual raid chat from the end of the first recorded Ragnaros kill. No single player won this fight.</p>
+            <blockquote class="mt">
+              <p>“I still tear up when I read this.”</p>
+              <cite>Mark Chen</cite>
+            </blockquote>
+            <button class="replay" type="button">↻ Replay log</button>
+          </div>
+          <div class="chat-frame">
+            <ol class="chat" aria-label="Raid chat log">
+              <li><time>21:12:54</time> <b class="raid">[Raid]</b> <b class="mage">Maxwell</b>: *** 15 seconds until Ragnaros emerges. ***</li>
+              <li class="yell"><time>21:13:02</time> <b class="mage">Maxwell</b> yells: ATTACK!</li>
+              <li class="yell"><time>21:13:07</time> Ragnaros yells: TASTE THE FLAMES OF SULFURON!</li>
+              <li class="yell"><time>21:13:12</time> Ragnaros yells: DIE, INSECT!</li>
+              <li class="ch"><time>21:13:20</time> <b class="chan">[madrogues]</b> <b class="rogue">Roger</b>: dump on him, just dont draw aggro.</li>
+              <li class="sys"><time>21:13:24</time> Rand has died.</li>
+              <li><time>21:13:38</time> <b class="raid">[Raid]</b> <b class="priest">Pall</b>: out of mana</li>
+              <li><time>21:14:05</time> <b class="raid">[Raid]</b> <b class="druid">Dierdre</b>: oom</li>
+              <li><time>21:14:32</time> <b class="raid">[Raid]</b> <b class="priest">Pall</b>: Will's healers are down!</li>
+              <li><time>21:14:37</time> <b class="raid">[Raid]</b> <b class="priest">Paula</b>: 5%!!!!!</li>
+              <li><time>21:14:41</time> <b class="raid">[Raid]</b> <b class="warrior">Woz</b>: Go go go!</li>
+              <li><time>21:14:44</time> <b class="raid">[Raid]</b> <b class="rogue">Thoguht</b>: Ironically, I have two healthstones.</li>
+              <li><time>21:14:48</time> <b class="raid">[Raid]</b> <b class="rogue">Roger</b>: its not over yet.</li>
+              <li><time>21:14:52</time> <b class="raid">[Raid]</b> <b class="priest">Paula</b>: 1!!!!!!!!!!!!!!!!!!!!</li>
+              <li><time>21:14:53</time> <b class="raid">[Raid]</b> <b class="warrior">Woz</b>: *Cheers from the deathpile* GO!</li>
+              <li><time>21:15:01</time> <b class="raid">[Raid]</b> <b class="mage">Mandy</b>: WOO!</li>
+              <li><time>21:15:03</time> <b class="raid">[Raid]</b> <b class="mage">Maxwell</b>: WOOOOO!</li>
+              <li><time>21:15:11</time> <b class="raid">[Raid]</b> <b class="warrior">Wong</b>: YARRRR!!</li>
+              <li><time>21:15:22</time> <b class="raid">[Raid]</b> <b class="shaman">Shaun</b>: MY HEART IS LITERALLY OUT OF MY CHEST</li>
+              <li><time>21:15:26</time> <b class="raid">[Raid]</b> <b class="shaman">Shaun</b>: I BOTH HATE AND LOVE YOU ALL</li>
+              <li><time>21:15:29</time> <b class="raid">[Raid]</b> <b class="shaman">Shaun</b>: &lt;3</li>
+            </ol>
+          </div>
+        </div>
+        <aside class="notes">
+          This is senses 1 to 5 working at once. Let the log play and don't talk over it. Point
+          out the roles: healers going "oom" (out of mana), Roger coaching the rogues in their own
+          channel, Woz cheering "from the deathpile." No individual is the expert here; the group
+          is. Next: how that same group fell apart a few months later.
+        </aside>
+      </section>
+
     </main>
   </div>
 
