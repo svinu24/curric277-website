@@ -1,0 +1,314 @@
+/* ==========================================================================
+   Leet Noobs — discussion-lead slide deck
+   Molten Core palette: charcoal, ember, and the gold from the book cover.
+   ========================================================================== */
+
+:root {
+  --bg: #110a07;
+  --surface: #1c120d;
+  --surface-2: #26180f;
+  --line: rgba(232, 181, 74, 0.22);
+  --ink: #f5ebde;
+  --muted: #b9a28d;
+  --gold: #e8b54a;
+  --ember: #ff6a2b;
+  --lava: #c2410c;
+
+  /* WoW item-rarity colors */
+  --uncommon: #1eff00;
+  --rare: #2f8fff;
+  --epic: #b45cf5;
+  --legendary: #ff8000;
+
+  /* WoW chat + class colors */
+  --raid: #ff7f00;
+  --yell: #ff4040;
+  --channel: #ffc0c0;
+  --system: #ffff70;
+  --mage: #3fc7eb;
+  --rogue: #fff468;
+  --priest: #ffffff;
+  --druid: #ff7c0a;
+  --warrior: #c69b6d;
+  --shaman: #4aa3ff;
+  --hunter: #aad372;
+  --warlock: #8788ee;
+
+  --display: "Cinzel", "Trajan Pro", Georgia, serif;
+  --body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+
+  --stage-w: 1600px;
+  --stage-h: 900px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--body);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Stage: fixed 16:9 canvas scaled to fit any screen ---------- */
+
+.viewport {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(ellipse 80% 55% at 50% 115%, rgba(255, 106, 43, 0.28), transparent 70%),
+    radial-gradient(ellipse 60% 40% at 15% -10%, rgba(232, 181, 74, 0.08), transparent 70%),
+    var(--bg);
+}
+
+.deck {
+  position: relative;
+  width: var(--stage-w);
+  height: var(--stage-h);
+  transform-origin: center center;
+  flex: none;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  padding: 84px 110px 96px;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(14px);
+  transition: opacity 0.45s ease, transform 0.45s ease, visibility 0s linear 0.45s;
+}
+
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition: opacity 0.45s ease, transform 0.45s ease, visibility 0s;
+}
+
+.slide.center {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* ---------- Type ---------- */
+
+.kicker {
+  font-family: var(--body);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ember);
+  margin: 0 0 14px;
+}
+
+h1, h2, h3 {
+  font-family: var(--display);
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+h1 { font-size: 132px; letter-spacing: 0.01em; }
+h2 { font-size: 62px; color: var(--ink); margin-bottom: 34px; }
+h3 { font-size: 30px; color: var(--gold); margin-bottom: 12px; }
+
+p, li { font-size: 28px; line-height: 1.45; }
+p { margin: 0 0 18px; }
+
+.lede {
+  font-size: 32px;
+  line-height: 1.45;
+  color: var(--ink);
+  max-width: 1250px;
+}
+
+.muted { color: var(--muted); }
+.gold { color: var(--gold); }
+.ember { color: var(--ember); }
+em { color: var(--gold); font-style: italic; }
+strong { color: var(--ink); font-weight: 700; }
+
+ul.clean { list-style: none; padding: 0; margin: 0; }
+ul.clean li {
+  position: relative;
+  padding-left: 38px;
+  margin-bottom: 16px;
+}
+ul.clean li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 0.55em;
+  width: 12px;
+  height: 12px;
+  transform: rotate(45deg);
+  background: var(--ember);
+  box-shadow: 0 0 12px rgba(255, 106, 43, 0.6);
+}
+
+/* ---------- Layout helpers ---------- */
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.split { display: grid; grid-template-columns: 1.15fr 1fr; gap: 60px; align-items: start; }
+.grow { flex: 1; }
+.mt-auto { margin-top: auto; }
+.mt { margin-top: 30px; }
+
+.card {
+  background: linear-gradient(180deg, var(--surface-2), var(--surface));
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 28px 30px;
+}
+.card p, .card li { font-size: 24px; }
+.card p:last-child { margin-bottom: 0; }
+
+.card .num {
+  font-family: var(--display);
+  font-size: 54px;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.pill {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--gold);
+  background: rgba(232, 181, 74, 0.08);
+}
+
+blockquote {
+  margin: 0;
+  padding: 6px 0 6px 34px;
+  border-left: 4px solid var(--gold);
+}
+blockquote p {
+  font-family: var(--display);
+  font-size: 36px;
+  line-height: 1.35;
+  color: var(--ink);
+}
+blockquote cite {
+  display: block;
+  font-style: normal;
+  font-size: 22px;
+  color: var(--muted);
+}
+
+/* ---------- Fragments (revealed one at a time with → / space) ---------- */
+
+.frag {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+.frag.shown { opacity: 1; transform: none; }
+
+/* ---------- Chrome: progress, counter, nav buttons ---------- */
+
+.progress {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  width: 0;
+  background: linear-gradient(90deg, var(--lava), var(--ember), var(--gold));
+  box-shadow: 0 0 14px rgba(255, 106, 43, 0.7);
+  transition: width 0.4s ease;
+  z-index: 20;
+}
+
+.hud {
+  position: fixed;
+  right: 22px;
+  bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 20;
+  font-size: 14px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.hud button {
+  font: inherit;
+  color: var(--ink);
+  background: rgba(28, 18, 13, 0.85);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  width: 34px;
+  height: 30px;
+  cursor: pointer;
+}
+.hud button:hover { border-color: var(--gold); color: var(--gold); }
+
+.hint {
+  position: fixed;
+  left: 22px;
+  bottom: 16px;
+  font-size: 13px;
+  color: var(--muted);
+  opacity: 0.7;
+  z-index: 20;
+}
+.hint kbd {
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 1px 6px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+
+body.clean-mode .hint,
+body.clean-mode .hud { opacity: 0; pointer-events: none; }
+
+/* ---------- Title slide ---------- */
+
+.title-slide .cover-title {
+  font-size: 190px;
+  font-weight: 900;
+  line-height: 0.95;
+  text-shadow: 0 0 60px rgba(255, 106, 43, 0.35);
+  margin-bottom: 26px;
+}
+.title-slide .cover-sub {
+  font-family: var(--display);
+  font-size: 38px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  max-width: 1100px;
+  line-height: 1.3;
+}
+.title-slide .cover-author {
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 26px;
+}
+.title-slide .presenters {
+  position: absolute;
+  bottom: 70px;
+  font-size: 22px;
+}
+.ink { color: var(--ink); }
