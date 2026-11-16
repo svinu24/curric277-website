@@ -833,3 +833,100 @@ body.print { overflow: auto; height: auto; }
   html, body { overflow: visible; height: auto; }
   * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
+
+/* ==========================================================================
+   Expertise redesign: the word as the through-line
+   ========================================================================== */
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+/* Title: the word as a dictionary headword */
+.pron {
+  font-family: var(--mono);
+  font-size: 30px;
+  color: var(--ink);
+  margin: 6px 0 34px;
+}
+.pron span:first-child { color: var(--gold); }
+.pron i { font-family: var(--display); color: var(--ember); margin-left: 10px; }
+
+/* Warm-up */
+.sentence {
+  font-family: var(--display);
+  font-size: 64px;
+  line-height: 1.2;
+  margin: 0 0 22px;
+}
+.blank { color: var(--ember); letter-spacing: 0.04em; }
+
+.collector { margin-top: 18px; }
+.collector-form { display: flex; gap: 12px; }
+.collector-form input {
+  flex: 1;
+  font: inherit;
+  font-size: 26px;
+  color: var(--ink);
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px 18px;
+  outline: none;
+}
+.collector-form input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(232, 181, 74, 0.18); }
+.collector-form button {
+  font: inherit;
+  font-size: 22px;
+  font-weight: 600;
+  padding: 0 24px;
+  border-radius: 10px;
+  border: 1px solid var(--gold);
+  background: rgba(232, 181, 74, 0.14);
+  color: var(--gold);
+  cursor: pointer;
+}
+.collector-form button.ghost { border-color: var(--line); background: transparent; color: var(--muted); }
+
+.chips { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; min-height: 56px; }
+.word-chip {
+  font-size: 26px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: rgba(232, 181, 74, 0.1);
+  border: 1px solid rgba(232, 181, 74, 0.4);
+  color: var(--ink);
+  animation: chipIn 0.3s ease both;
+}
+.word-chip.sample { border-style: dashed; color: var(--muted); }
+@keyframes chipIn { from { opacity: 0; transform: scale(0.85); } }
+
+/* Two definitions */
+.defs { align-items: stretch; }
+.dict { padding: 30px 34px; }
+.dict-word {
+  font-family: var(--display);
+  font-size: 46px;
+  color: var(--gold);
+  margin: 18px 0 10px;
+}
+.dict-word i { font-family: var(--body); font-size: 26px; color: var(--muted); margin-left: 6px; }
+.dict .dict-sense { font-size: 30px; line-height: 1.4; }
+.dict .dict-note { font-size: 22px; color: var(--muted); margin-top: 18px; }
+.dict.chen { border-color: rgba(255, 106, 43, 0.55); box-shadow: 0 0 40px rgba(255, 106, 43, 0.12); }
+.dict.chen .pill { color: var(--ember); border-color: rgba(255, 106, 43, 0.5); background: rgba(255, 106, 43, 0.08); }
+
+.roadmap { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 34px; }
+.roadmap-label { font-size: 22px; color: var(--muted); margin-right: 6px; }
+.sense-chip {
+  font-family: var(--display);
+  font-size: 24px;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  color: var(--gold);
+  background: var(--surface-2);
+}

@@ -131,3 +131,61 @@
     render();
   });
 })();
+
+/* ---------- Warm-up word collector (words reappear on the definition slide) ---------- */
+
+(() => {
+  const KEY = "expertise-deck-words";
+  const load = () => {
+    try { return JSON.parse(localStorage.getItem(KEY)) || []; } catch { return []; }
+  };
+  const save = (words) => {
+    try { localStorage.setItem(KEY, JSON.stringify(words)); } catch { /* storage unavailable */ }
+  };
+
+  let words = load();
+
+  function render() {
+    document.querySelectorAll("[data-words]").forEach((box) => {
+      box.innerHTML = "";
+      const list = words.length ? words : (box.dataset.fallback ? box.dataset.fallback.split("|") : []);
+      list.forEach((w, i) => {
+        const chip = document.createElement("span");
+        chip.className = "word-chip" + (words.length ? "" : " sample");
+        chip.textContent = w;
+        chip.style.setProperty("--i", i);
+        box.appendChild(chip);
+      });
+    });
+  }
+
+  const collector = document.querySelector("[data-collector]");
+  if (collector) {
+    const form = collector.querySelector("form");
+    const input = collector.querySelector("input");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const w = input.value.trim();
+      if (w && !words.some((x) => x.toLowerCase() === w.toLowerCase())) {
+        words.push(w);
+        save(words);
+        render();
+      }
+      input.value = "";
+    });
+
+    collector.querySelector("[data-clear]").addEventListener("click", () => {
+      words = [];
+      save(words);
+      render();
+    });
+
+    // Esc hands the keyboard back to the slide navigation.
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") input.blur();
+    });
+  }
+
+  render();
+})();

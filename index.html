@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Leet Noobs · Discussion Lead</title>
-  <meta name="description" content="Discussion-lead slide deck on Mark Chen's Leet Noobs: The Life and Death of an Expert Player Group in World of Warcraft.">
+  <title>Expertise · Leet Noobs Discussion</title>
+  <meta name="description" content="Discussion-lead slide deck on the word expertise, as Mark Chen redefines it in Leet Noobs: The Life and Death of an Expert Player Group in World of Warcraft.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -15,92 +15,124 @@
     <main class="deck" id="deck">
 
       <!-- ============================================================
-           1 · TITLE
+           1 · TITLE — the word itself
            ============================================================ -->
-      <section class="slide center title-slide" data-title="Title">
+      <section class="slide center title-slide" data-title="Expertise">
         <p class="kicker">Curric 277 · Discussion Lead</p>
-        <h1 class="cover-title"><span class="gold">Leet</span> Noobs</h1>
-        <p class="cover-sub">The Life and Death of an Expert Player Group in <em>World of Warcraft</em></p>
-        <p class="cover-author">Mark Chen <span class="muted">(2012)</span></p>
+        <h1 class="cover-title">Expertise</h1>
+        <p class="pron"><span>ex·per·tise</span> <span class="muted">/ˌek-spər-ˈtēz/</span> <i>noun</i></p>
+        <p class="cover-sub">What does it really mean to be an expert?<br>Rethinking the word through Mark Chen's <em>Leet Noobs</em> (2012)</p>
         <!-- EDIT: put your group members' names here -->
         <p class="presenters muted">Presented by <span class="ink">Your Names Here</span></p>
         <aside class="notes">
-          Welcome everyone. Today we're covering Mark Chen's Leet Noobs, an ethnography of a
-          40-person World of Warcraft raid group. Roughly 12 minutes of summary, then we'll open
-          it up for discussion. Use the arrow keys or space to advance.
+          Today is about one word: expertise. Mark Chen's book Leet Noobs follows a World of
+          Warcraft raid group, but its real argument is that we've been defining expertise too
+          narrowly. We'll take the definition apart and rebuild it using the reading, then
+          discuss it.
         </aside>
       </section>
 
       <!-- ============================================================
-           2 · HOOK — the prologue
+           2 · WARM-UP — collect the class's definition
            ============================================================ -->
-      <section class="slide" data-title="In the Fiery Depths">
-        <p class="kicker">Prologue · In the Fiery Depths…</p>
-        <h2>Imagine 40 people in a volcanic cavern</h2>
-        <div class="split grow">
-          <div>
-            <p class="lede">Orcs, trolls, undead, and tauren crowd a lava-filled chamber. Some are dancing. Some are chatting about their day. One is assigning positions.</p>
-            <p class="lede">“Get in positions!” The fire lord <strong>Ragnaros</strong> rises from the lava:</p>
-            <p class="boss-yell">“TOO SOON! YOU HAVE AWAKENED ME TOO SOON, EXECUTUS!”</p>
-            <p class="lede frag punchline">Within moments, the raiders are all dead.</p>
-          </div>
-          <div class="card frag poll">
-            <span class="pill">Quick show of hands</span>
-            <ul class="clean mt">
-              <li>Who has played an MMO, like <em>WoW</em>, <em>FFXIV</em>, or <em>Destiny</em>?</li>
-              <li>Who has been on a team where <strong>everyone was good</strong>, but it still didn't work?</li>
-              <li>Who has watched a group you loved <strong>fall apart</strong>?</li>
-            </ul>
-          </div>
+      <section class="slide" data-title="Warm-up">
+        <p class="kicker">Warm-up · Before the reading</p>
+        <h2>Finish the sentence:</h2>
+        <p class="sentence">“An expert is someone who <span class="blank">______</span>.”</p>
+        <p class="lede muted">Think of someone you'd call an expert at a game you play. What makes them one? Call out a word or phrase.</p>
+        <div class="collector card" data-collector>
+          <form class="collector-form">
+            <label class="sr-only" for="word-input">Add a word from the class</label>
+            <input id="word-input" type="text" autocomplete="off" maxlength="40" placeholder="Type a word the class says, then press Enter">
+            <button type="submit">Add</button>
+            <button type="button" class="ghost" data-clear>Clear</button>
+          </form>
+          <div class="chips" data-words aria-live="polite"></div>
         </div>
         <aside class="notes">
-          Read the scene dramatically; it's straight from the book's prologue. Pause after
-          "all dead." The point: this group failed over and over before they won. Then do the
-          show of hands. It warms the room up and tells us how much WoW context people need.
+          Collect 6–10 words quickly. Expect "skill," "practice," "knowledge," "talent," "wins a
+          lot." Click the box, type each word, and press Enter. Press Esc to get back to
+          navigating. These words are saved and come back on slide 15, where we compare them to
+          Chen's definition.
         </aside>
       </section>
 
       <!-- ============================================================
-           3 · THE STUDY
+           3 · TWO DEFINITIONS — the thesis + roadmap
            ============================================================ -->
-      <section class="slide" data-title="The Study">
-        <p class="kicker">The book</p>
-        <h2>An insider's account of one raid group</h2>
+      <section class="slide" data-title="Two Definitions">
+        <p class="kicker">The argument of the book</p>
+        <h2>Chen wants to change what the word means</h2>
+        <div class="grid-2 defs">
+          <div class="dict card">
+            <span class="pill">The everyday definition</span>
+            <p class="dict-word">expertise <i>n.</i></p>
+            <p class="dict-sense">A high level of skill or knowledge that <strong>one person</strong> has in a particular area.</p>
+            <p class="dict-note">It lives in your head, you prove it with tests, levels, and credentials, and you take it with you.</p>
+          </div>
+          <div class="dict card chen frag">
+            <span class="pill">Chen's definition</span>
+            <p class="dict-word">expertise <i>n.</i></p>
+            <p class="dict-sense">“Successfully learning to <strong>participate</strong> in a community of practice.”</p>
+            <p class="dict-note">He moves away from “a cognitivist conceptualization of expertise as individual knowledge and skill acquisition.”</p>
+          </div>
+        </div>
+        <div class="roadmap frag">
+          <span class="roadmap-label">Today we rebuild it, one sense at a time. Expertise is…</span>
+          <span class="sense-chip">social</span>
+          <span class="sense-chip">earned</span>
+          <span class="sense-chip">situated</span>
+          <span class="sense-chip">collective</span>
+          <span class="sense-chip">sociomaterial</span>
+          <span class="sense-chip">contested</span>
+        </div>
+        <aside class="notes">
+          Left is the definition most of us walked in with, and probably close to the warm-up
+          words. Reveal Chen's version: expertise isn't something you HAVE, it's something you
+          DO with other people. Then reveal the roadmap: six senses of the word, each tied to a
+          part of the book. Watch for the tracker in the top-right corner as we go.
+        </aside>
+      </section>
+
+      <!-- ============================================================
+           4 · THE READING — where Chen studied expertise
+           ============================================================ -->
+      <section class="slide" data-title="The Reading">
+        <p class="kicker">The reading · Leet Noobs: The Life and Death of an Expert Player Group in World of Warcraft</p>
+        <h2>Where Chen watched expertise happen</h2>
         <div class="grid-4">
           <div class="card stat"><div class="num">~60</div><p>players from several different guilds</p></div>
           <div class="card stat"><div class="num">40</div><p>players per raid in the dungeon <strong>Molten Core</strong></p></div>
           <div class="card stat"><div class="num">10 mo</div><p>from the group's start in late 2005 to its collapse in 2006</p></div>
           <div class="card stat"><div class="num">~7 mo</div><p>of trying before they beat the final boss, <strong>Ragnaros</strong></p></div>
         </div>
-        <div class="grid-2 mt">
+        <div class="split mt">
           <div>
             <h3>How he studied it</h3>
             <ul class="clean">
               <li><strong>Ethnography:</strong> Chen played as a rogue named <em>Thoguht</em> and was an officer in the <em>Booty Bay Anglers</em> guild.</li>
-              <li>He recorded text and voice chat, gameplay video, and guild forum posts.</li>
+              <li>He recorded chat, voice, gameplay video, and forum posts, because expertise has to be <strong>observed in practice</strong>, not measured with a survey.</li>
             </ul>
           </div>
-          <div>
-            <h3>The lenses he uses</h3>
-            <ul class="clean">
-              <li><strong>New literacy studies:</strong> being "literate" means participating in a community.</li>
-              <li><strong>Actor-network theory &amp; distributed cognition:</strong> people <em>and</em> tools do the thinking.</li>
-            </ul>
-          </div>
+          <blockquote>
+            <p>“Being an expert in this case might not necessarily be tied to proficiency.”</p>
+            <cite>Chen, describing himself as an expert gamer who admits he “kind of sucked” at shooters</cite>
+          </blockquote>
         </div>
         <aside class="notes">
-          Chen is a learning scientist who was also a player in this group, so he isn't neutral.
-          He says so himself: "take it with a grain of salt." The raid was led by Maxwell from
-          a guild called The 7/10 Split, with players from several allied guilds.
+          Chen is a learning scientist who was also a member of the raid, so he's an insider, not
+          a neutral observer. The quote is a great hook: he calls himself an expert gamer while
+          admitting he isn't the most skilled player. He compares it to being "well read." Being
+          "well played" is its own kind of expertise.
         </aside>
       </section>
 
       <!-- ============================================================
-           4 · WOW PRIMER — the game tie-in
+           5 · THE GAME — what expert play looks like in WoW
            ============================================================ -->
-      <section class="slide" data-title="WoW Primer">
+      <section class="slide" data-title="The Game">
         <p class="kicker">The game · World of Warcraft (Blizzard, 2004)</p>
-        <h2>A 60-second raiding primer</h2>
+        <h2>What expert play looks like in a raid</h2>
         <div class="grid-3 grow">
           <div class="card role tank">
             <h3>Tank</h3>
@@ -129,524 +161,9 @@
         </div>
         <p class="glossary mt"><span>wipe</span> everyone dies · <span>pull</span> start a fight · <span>leet</span> elite / expert · <span>noob</span> newbie</p>
         <aside class="notes">
-          This is our tie-in to the assigned game. Keep it quick: the three roles, aggro, and
-          the fact that loot is scarce are all you need for the rest of the book. A "wipe" is
-          when the whole raid dies and has to run back and try again.
-        </aside>
-      </section>
-
-      <!-- ============================================================
-           5 · BIG IDEA — expertise is social
-           ============================================================ -->
-      <section class="slide" data-title="Expertise Is Social">
-        <p class="kicker">Introduction · The big idea</p>
-        <h2>Expertise lives in groups, not just in heads</h2>
-        <div class="split grow">
-          <div>
-            <blockquote>
-              <p>“Expertise is not the ability to remember the exact numbers and ‘math’ underlying the game.”</p>
-            </blockquote>
-            <p class="lede mt">Instead, expertise is the ability to <strong>arrange people, tools, and roles</strong> so the work gets shared out. Becoming an expert means learning to participate in a <em>community of practice</em> (Lave &amp; Wenger).</p>
-          </div>
-          <div>
-            <h3>Two kinds of capital (Bourdieu)</h3>
-            <div class="card capital">
-              <p><strong class="gold">Social capital:</strong> relationships and reciprocity, or "scratching one another's backs."</p>
-            </div>
-            <div class="card capital">
-              <p><strong class="gold">Cultural capital:</strong> know-how from experience, the right tools, and recognized credentials.</p>
-            </div>
-            <p class="ember capital-tag">“It takes capital to make capital.”</p>
-          </div>
-        </div>
-        <aside class="notes">
-          This is the thesis of the whole book. You can't become an expert raider by reading the
-          numbers; you need access to a group that will let you practice. Getting that access
-          depends on who you know (social capital) and what you know how to do (cultural capital),
-          and each one helps you build the other.
-        </aside>
-      </section>
-
-      <!-- ============================================================
-           6 · CH. 1 — individual vs. group expertise
-           ============================================================ -->
-      <section class="slide" data-title="Leet Noobs">
-        <p class="kicker">Chapter 1 · Individual vs. Group Expertise</p>
-        <h2>From solo skill to group expertise</h2>
-        <div class="stages">
-          <div class="card stage">
-            <span class="pill">Stage 1</span>
-            <h3>Leveling up</h3>
-            <p>Levels 1–60. Mostly <strong>individual</strong>: you set up your own interface, add-ons, and friends list.</p>
-          </div>
-          <div class="stage-arrow" aria-hidden="true">→</div>
-          <div class="card stage">
-            <span class="pill">Stage 2</span>
-            <h3>Raiding</h3>
-            <p>40 players with <strong>specialized roles</strong>, and constant negotiation over the roster, the schedule, and the loot.</p>
-          </div>
-        </div>
-        <div class="split mt">
-          <div class="card frag define">
-            <h3>“Leet noobs”</h3>
-            <p>Expert players who become <strong>beginners again</strong> when the context changes. They knew the game, but they had to relearn expert play <em>together</em>.</p>
-          </div>
-          <blockquote class="frag">
-            <p>“Just because you are good at your class, doesn't mean you are a good player. We value you as a player, not as a class.”</p>
-            <cite>Thoguht (Chen), guild forum post, 2005</cite>
-          </blockquote>
-        </div>
-        <aside class="notes">
-          This is where the title comes from. Everyone in the raid was already a strong
-          level-60 player, but raiding was a new kind of game: their individual skill didn't
-          transfer automatically. They had to become a team.
-        </aside>
-      </section>
-
-      <!-- ============================================================
-           7 · CH. 2 — communication, coordination, camaraderie
-           ============================================================ -->
-      <section class="slide" data-title="A Night in Molten Core">
-        <p class="kicker">Chapter 2 · Communication, Coordination &amp; Camaraderie</p>
-        <h2>A typical night in Molten Core</h2>
-        <div class="split grow">
-          <ul class="clean">
-            <li><strong>About 5 hours a night:</strong> gather and chat, pull, fight, wipe, talk it over, try again.</li>
-            <li><strong>Chat split into channels by role</strong> (healers, rogues, tanks), and leaders moved to the main channel when it mattered.</li>
-            <li><strong>Failure was welcome.</strong> Wiping was how you found a fight's "groove." Some players thought reading strategy guides ahead of time was a <em>spoiler</em>.</li>
-            <li class="frag"><strong>Bad nights got repaired</strong> on the forums the next day, and regular members reminded everyone: <em>“we're family.”</em></li>
-          </ul>
-          <div>
-            <blockquote>
-              <p>“We're not a raiding guild… No one is getting left behind and everyone is getting a chance.”</p>
-              <cite>Penny, Booty Bay Anglers</cite>
-            </blockquote>
-            <div class="card frag claim">
-              <p><span class="pill">Chen's claim</span></p>
-              <p>Trust built on <strong>shared goals and real relationships</strong> was stronger than trust built on <strong>individual incentives</strong>.</p>
-            </div>
-          </div>
-        </div>
-        <aside class="notes">
-          Emphasize that the raid was mostly slow and social, not instant gratification. The
-          "goal" the group kept stating was "hanging out and having fun." After one awful night
-          in April 2006 (lots of wipes, bickering, a loot dispute), the group fixed itself on the
-          forums. Remember that night; we'll compare it to the ending later.
-        </aside>
-      </section>
-
-      <!-- ============================================================
-           8 · ACTIVITY — the loot problem
-           ============================================================ -->
-      <section class="slide" data-title="Loot Vote">
-        <p class="kicker">Quick vote · The social dilemma of rare loot</p>
-        <h2>Golemagg drops one epic. 40 people want it.</h2>
-        <p class="lede muted vote-help">How should your raid decide? Vote with your hands, and we'll tally it.</p>
-        <div class="grid-4 loot-grid">
-          <button class="tooltip loot" data-loot="dkp">
-            <span class="item-name epic">DKP Auction</span>
-            <span class="item-type">Points system</span>
-            <span class="item-desc">Earn points for every boss you show up for, then bid them on items. Highest bid wins.</span>
-            <span class="votes" aria-live="polite">0</span>
-          </button>
-          <button class="tooltip loot" data-loot="council">
-            <span class="item-name epic">Loot Council</span>
-            <span class="item-type">Leaders decide</span>
-            <span class="item-desc">Officers give the item to whoever makes the <em>whole raid</em> strongest.</span>
-            <span class="votes" aria-live="polite">0</span>
-          </button>
-          <button class="tooltip loot" data-loot="roll">
-            <span class="item-name epic">Open Roll</span>
-            <span class="item-type">Pure chance</span>
-            <span class="item-desc">Everyone who wants it rolls 1–100. Highest roll wins.</span>
-            <span class="votes" aria-live="polite">0</span>
-          </button>
-          <button class="tooltip loot chen" data-loot="weighted">
-            <span class="item-name epic">Weighted Roll</span>
-            <span class="item-type">Seniority + luck</span>
-            <span class="item-desc">Roll 1–100 and the <strong>lowest</strong> roll wins. Each night you go without loot, your range shrinks by 10 (1–90, 1–80…).</span>
-            <span class="votes" aria-live="polite">0</span>
-          </button>
-        </div>
-        <p class="hint-inline tally-hint">Click a card to add a vote · shift-click to undo</p>
-        <div class="card frag reveal">
-          <p><strong class="gold">What Chen's raid chose:</strong> the weighted roll, decided after three long forum threads. It's a little chaotic on purpose. Loyal raiders get better odds, but a newcomer can still win. It kept loot as <em>“an added bonus to the more valued experience itself.”</em></p>
-        </div>
-        <aside class="notes">
-          Read the four options, then take a show of hands for each and click the cards to tally
-          it. Then reveal what Chen's group did. Most real raids used DKP, which makes the
-          competition explicit. Chen's group deliberately chose a system that made loot matter
-          less. Plant the seed for discussion: Chen compares grades to loot.
-        </aside>
-      </section>
-
-      <!-- ============================================================
-           9 · CH. 3 — assembling to kill Ragnaros (KTM)
-           ============================================================ -->
-      <section class="slide" data-title="The Threat Meter">
-        <p class="kicker">Chapter 3 · Assembling to Kill Ragnaros</p>
-        <h2>A new raid member: the add-on</h2>
-        <div class="split grow">
-          <div>
-            <p class="lede"><strong>Actor-network theory:</strong> the raid is a network of people <em>and</em> things (add-ons, voice chat, forums), and each one does part of the thinking.</p>
-            <p class="lede">In March 2006 the raid adopts the <strong>KLH Threat Meter (KTM)</strong>, a fan-made add-on that shows everyone's threat in real time.</p>
-            <ul class="clean ktm-effects">
-              <li class="frag">No more guessing: fights got faster and new bosses got easier to learn.</li>
-              <li class="frag">The raid leader stopped saying <em>“melee, watch your aggro”</em> and started calling out names: <em>“Roger!”</em></li>
-              <li class="frag">Trust moved from <strong>people</strong> to <strong>tools</strong>, and the meter doubled as <strong>surveillance</strong>.</li>
-            </ul>
-          </div>
-          <div class="ktm-wrap">
-            <div class="ktm step" data-order="-1" aria-label="KLH Threat Meter mock-up">
-              <div class="ktm-head">
-                <span>KLH Threat Meter</span>
-                <span class="ktm-mode"><span class="off">no add-on: guessing</span><span class="on">raid view</span></span>
-              </div>
-              <ol class="ktm-rows">
-                <li style="--w:100%; --c:var(--warrior)"><span class="who">Warren</span><span class="bar"><i></i></span><span class="val">100%</span></li>
-                <li style="--w:91%;  --c:var(--warrior)"><span class="who">Wendy</span><span class="bar"><i></i></span><span class="val">91%</span></li>
-                <li style="--w:64%;  --c:var(--rogue)"><span class="who">Roger</span><span class="bar"><i></i></span><span class="val">64%</span></li>
-                <li style="--w:58%;  --c:var(--rogue)"><span class="who">Thoguht</span><span class="bar"><i></i></span><span class="val">58%</span></li>
-                <li style="--w:51%;  --c:var(--mage)"><span class="who">Mandy</span><span class="bar"><i></i></span><span class="val">51%</span></li>
-                <li style="--w:39%;  --c:var(--hunter)"><span class="who">Hall</span><span class="bar"><i></i></span><span class="val">39%</span></li>
-              </ol>
-            </div>
-            <p class="caption">Modeled on Figure 5 in the book. Tanks Warren and Wendy hold the top spots, so the DPS can safely go all-out.</p>
-          </div>
-        </div>
-        <aside class="notes">
-          Press next once to "install" the add-on: the meter goes from question marks to live
-          bars. That's Chen's point about offloading cognition: the tool now does the thinking
-          that used to happen in chat. Then reveal the three effects. Fun fact: Blizzard later
-          built threat displays into the game itself, so the players' tool changed the designers.
-        </aside>
-      </section>
-
-      <!-- ============================================================
-           10 · EPILOGUE — the Ragnaros kill, replayed
-           ============================================================ -->
-      <section class="slide" data-title="Victory!">
-        <p class="kicker">Epilogue · Victory! · May 19, 2006</p>
-        <div class="split victory grow">
-          <div>
-            <h2>The first recorded Ragnaros kill</h2>
-            <p class="lede">After months of wipes, here is the actual raid chat from the end of the fight.</p>
-            <blockquote class="mt">
-              <p>“I still tear up when I read this.”</p>
-              <cite>Mark Chen</cite>
-            </blockquote>
-            <button class="replay" type="button">↻ Replay log</button>
-          </div>
-          <div class="chat-frame">
-            <ol class="chat" aria-label="Raid chat log">
-              <li><time>21:12:54</time> <b class="raid">[Raid]</b> <b class="mage">Maxwell</b>: *** 15 seconds until Ragnaros emerges. ***</li>
-              <li class="yell"><time>21:13:02</time> <b class="mage">Maxwell</b> yells: ATTACK!</li>
-              <li class="yell"><time>21:13:07</time> Ragnaros yells: TASTE THE FLAMES OF SULFURON!</li>
-              <li class="yell"><time>21:13:12</time> Ragnaros yells: DIE, INSECT!</li>
-              <li class="ch"><time>21:13:20</time> <b class="chan">[madrogues]</b> <b class="rogue">Roger</b>: dump on him, just dont draw aggro.</li>
-              <li class="sys"><time>21:13:24</time> Rand has died.</li>
-              <li><time>21:13:38</time> <b class="raid">[Raid]</b> <b class="priest">Pall</b>: out of mana</li>
-              <li><time>21:14:05</time> <b class="raid">[Raid]</b> <b class="druid">Dierdre</b>: oom</li>
-              <li><time>21:14:32</time> <b class="raid">[Raid]</b> <b class="priest">Pall</b>: Will's healers are down!</li>
-              <li><time>21:14:37</time> <b class="raid">[Raid]</b> <b class="priest">Paula</b>: 5%!!!!!</li>
-              <li><time>21:14:41</time> <b class="raid">[Raid]</b> <b class="warrior">Woz</b>: Go go go!</li>
-              <li><time>21:14:44</time> <b class="raid">[Raid]</b> <b class="rogue">Thoguht</b>: Ironically, I have two healthstones.</li>
-              <li><time>21:14:48</time> <b class="raid">[Raid]</b> <b class="rogue">Roger</b>: its not over yet.</li>
-              <li><time>21:14:52</time> <b class="raid">[Raid]</b> <b class="priest">Paula</b>: 1!!!!!!!!!!!!!!!!!!!!</li>
-              <li><time>21:14:53</time> <b class="raid">[Raid]</b> <b class="warrior">Woz</b>: *Cheers from the deathpile* GO!</li>
-              <li><time>21:15:01</time> <b class="raid">[Raid]</b> <b class="mage">Mandy</b>: WOO!</li>
-              <li><time>21:15:03</time> <b class="raid">[Raid]</b> <b class="mage">Maxwell</b>: WOOOOO!</li>
-              <li><time>21:15:11</time> <b class="raid">[Raid]</b> <b class="warrior">Wong</b>: YARRRR!!</li>
-              <li><time>21:15:22</time> <b class="raid">[Raid]</b> <b class="shaman">Shaun</b>: MY HEART IS LITERALLY OUT OF MY CHEST</li>
-              <li><time>21:15:26</time> <b class="raid">[Raid]</b> <b class="shaman">Shaun</b>: I BOTH HATE AND LOVE YOU ALL</li>
-              <li><time>21:15:29</time> <b class="raid">[Raid]</b> <b class="shaman">Shaun</b>: &lt;3</li>
-            </ol>
-          </div>
-        </div>
-        <aside class="notes">
-          Let the log play; don't talk over it. Point out "oom" (out of mana): the healers are
-          running dry, Woz is cheering "from the deathpile," and Shaun's "I BOTH HATE AND LOVE YOU
-          ALL" sums up raiding. This is the high point. Next slide: how it all fell apart a few
-          months later.
-        </aside>
-      </section>
-
-      <!-- ============================================================
-           11 · CH. 4 — death of a raid (timeline)
-           ============================================================ -->
-      <section class="slide" data-title="Death of a Raid">
-        <p class="kicker">Chapter 4 · Death of a Raid</p>
-        <h2>From “hanging out and having fun” to meltdown</h2>
-        <ol class="timeline grow">
-          <li>
-            <span class="when">Late 2005</span>
-            <p>Raid forms across several guilds, led by <strong>Maxwell</strong> of <em>The 7/10 Split</em>. Stated goal: <em>hang out and have fun.</em></p>
-          </li>
-          <li>
-            <span class="when">Spring 2006</span>
-            <p>KTM arrives and Ragnaros falls. The raid moves Molten Core to <strong>one night a week</strong> and starts a harder dungeon, <em>Blackwing Lair</em>.</p>
-          </li>
-          <li class="frag">
-            <span class="when">Summer 2006</span>
-            <p>About a dozen raiders, mostly core members, leave for faster groups that use DKP. Progress stalls (<em>“Vael breaks raids”</em>), and even Molten Core gets hard again.</p>
-          </li>
-          <li class="frag hot">
-            <span class="when">Sept 10–11, 2006</span>
-            <p>Matt sees the leaders' guild in Molten Core on an <strong>unscheduled Sunday</strong> without the allied guilds. He asks about it on the forum, accusations fly, and within days <strong>the raid is dead</strong>.</p>
-          </li>
-        </ol>
-        <aside class="notes">
-          Walk through the timeline quickly. The trigger was small: a Sunday run that some members
-          didn't know about. But it landed on months of built-up frustration. Maxwell's last post:
-          "I thought of you as a friend, and now you treat me like this?"
-        </aside>
-      </section>
-
-      <!-- ============================================================
-           12 · CH. 4 — why it died
-           ============================================================ -->
-      <section class="slide" data-title="Why It Died">
-        <p class="kicker">Chapter 4 · Making Sense of the Meltdown</p>
-        <h2>Same forum, same people, different ending</h2>
-        <div class="grid-2 compare">
-          <div class="card good">
-            <span class="pill">April 2006 · repaired</span>
-            <p class="mt">After an awful night of wipes, bickering, and loot fights, <strong>regular members</strong> (not leaders) restated the group's goals.</p>
-            <p>The conflict was framed as a normal family argument: <em>temporary</em>.</p>
-          </div>
-          <div class="card bad">
-            <span class="pill">September 2006 · meltdown</span>
-            <p class="mt">Raiders framed the conflict as <strong>“drama.”</strong> A vocal minority set the tone, and many members didn't find out until days later.</p>
-            <p><em>“The simple act of calling it drama may have turned it into drama.”</em></p>
-          </div>
-        </div>
-        <div class="causes frag">
-          <span class="causes-label">Underneath it all</span>
-          <span class="cause">Goals drifted toward <b>loot &amp; progress</b></span>
-          <span class="cause">Progress <b>stalled</b>, then went backwards</span>
-          <span class="cause"><b>~15 hrs a week</b> for almost a year</span>
-          <span class="cause">One raider's math: an epic cost <b>“$133 in labor alone”</b></span>
-        </div>
-        <aside class="notes">
-          This comparison is the heart of chapter 4. The group had survived a crisis before, so
-          what changed was the framing and the goals, not the people. Chen draws on Goffman's
-          idea of framing here. The cost math is from a raider named Mandy, who priced raid time
-          at $10 an hour and worked out what one epic item really cost.
-        </aside>
-      </section>
-
-      <!-- ============================================================
-           13 · TAKEAWAYS
-           ============================================================ -->
-      <section class="slide" data-title="Takeaways">
-        <p class="kicker">Conclusion · The major assertions</p>
-        <h2>What Chen wants us to take away</h2>
-        <div class="takeaways">
-          <div class="card"><div class="num">1</div><p><strong>Expertise is collective.</strong> It's arranging people and tools well, not memorizing the math.</p></div>
-          <div class="card"><div class="num">2</div><p><strong>Access is everything.</strong> You become an expert only if a community lets you in, and that takes social and cultural capital.</p></div>
-          <div class="card"><div class="num">3</div><p><strong>Failure teaches,</strong> if the group frames it as a chance to reflect.</p></div>
-          <div class="card"><div class="num">4</div><p><strong>Trust shifted</strong> from trusting people to trusting tools and numbers.</p></div>
-          <div class="card"><div class="num">5</div><p><strong>Shared goals keep teams alive.</strong> When the goals split, so did the raid.</p></div>
-        </div>
-        <blockquote class="frag big-quote">
-          <p>“We changed from being friends and family to just co-workers.”</p>
-        </blockquote>
-        <aside class="notes">
-          Five takeaways, one sentence each. Chen's closing claim is that none of this is really
-          about WoW: "Leet noobs can exist in any domain of activity." Any team of experts working
-          on something hard (a lab, a startup, a group project) goes through the same thing.
-        </aside>
-      </section>
-
-      <!-- ============================================================
-           14 · BEYOND WOW — other game examples
-           ============================================================ -->
-      <section class="slide" data-title="Beyond WoW">
-        <p class="kicker">Connections · “Leet noobs can exist in any domain of activity”</p>
-        <h2>The same story, nearly 20 years later</h2>
-        <div class="grid-2 beyond grow">
-          <div class="card">
-            <h3>Destiny 2 raids</h3>
-            <p>Six-player raids with no built-in matchmaking, so players recruit through Discord and LFG sites. Your <strong>social network</strong> is literally your way in.</p>
-          </div>
-          <div class="card">
-            <h3>Overwatch Role Queue</h3>
-            <p>Blizzard's team shooter now <strong>locks in</strong> tank, damage, and support slots. The role negotiation Chen's raid did by talking is now handled by the game's design.</p>
-          </div>
-          <div class="card">
-            <h3>Raider.IO &amp; Warcraft Logs</h3>
-            <p>Modern WoW players get public performance scores, and groups check them before inviting you. That's KTM's surveillance at a much bigger scale.</p>
-          </div>
-          <div class="card">
-            <h3>Outside games</h3>
-            <p>Group projects, sports teams, jobs, clubs: specialized roles, trust, “loot” (grades, credit, promotions), and yes, drama.</p>
-          </div>
-        </div>
-        <aside class="notes">
-          Brief context for anyone who hasn't played these games. The point: everything Chen saw
-          in 2006 has since been built into games and tools. Access through social networks,
-          formal roles, and performance metrics are now the default. Then segue: "So let's talk
-          about your own groups."
-        </aside>
-      </section>
-
-      <!-- ============================================================
-           15 · DISCUSSION FORMAT
-           ============================================================ -->
-      <section class="slide" data-title="Discussion Format">
-        <p class="kicker">Discussion</p>
-        <h2>Your turn: think, pair, share</h2>
-        <div class="tps">
-          <div class="card"><div class="num">1</div><h3>Think</h3><p>1 minute. Quietly jot down your answer.</p></div>
-          <div class="card"><div class="num">2</div><h3>Pair</h3><p>2 minutes. Talk it through with a neighbor.</p></div>
-          <div class="card"><div class="num">3</div><h3>Share</h3><p>Whole class. Build on what others say.</p></div>
-        </div>
-        <div class="split mt">
-          <div>
-            <h3>Ground rules</h3>
-            <ul class="clean">
-              <li>There's no single right answer.</li>
-              <li>Back it up with the reading <em>or</em> your own experience.</li>
-              <li>Respond to each other, not just to us.</li>
-            </ul>
-          </div>
-          <div class="card stems">
-            <h3>Conversation starters</h3>
-            <p>“Could you tell me more about why ___?”</p>
-            <p>“Let me explain why I see that differently.”</p>
-            <p>“Have you considered ___?”</p>
-            <p>“What we both agree on is ___.”</p>
-          </div>
-        </div>
-        <aside class="notes">
-          This structure comes from Finley's "Rethinking Whole Class Discussion": rehearse first
-          (think-pair-share) so more people are ready to talk. When you ask a question, wait at
-          least 3–5 seconds before jumping in. Each question slide has a timer: click Think,
-          then Pair, then Share.
-        </aside>
-      </section>
-
-      <!-- ============================================================
-           16 · QUESTION 1
-           ============================================================ -->
-      <section class="slide question" data-title="Question 1">
-        <p class="kicker">Question 1 of 3 · Friends or co-workers?</p>
-        <div class="q-layout grow">
-          <div>
-            <p class="q-context">Chen asks game designers: <em>“Do you want your players to be co-workers or would you rather they be friends?”</em></p>
-            <p class="q-text">Think of a team you've been on: a raid, a group project, a sports team, a job. Was it more <span class="gold">“family”</span> or <span class="gold">“co-workers,”</span> and how did that shape what your team actually got done?</p>
-            <div class="followups">
-              <span class="followups-label frag">Follow-ups</span>
-              <p class="frag">What made it that way: the <strong>people</strong>, the <strong>goal</strong>, or the <strong>rules</strong>?</p>
-              <p class="frag">Chen compares grades to loot. Would his idea of making rewards matter <em>less</em> work in a graded group project?</p>
-            </div>
-          </div>
-          <div class="timer card" data-timer>
-            <div class="timer-face"><span class="timer-phase">Ready</span><span class="timer-time">0:00</span></div>
-            <div class="timer-bar"><i></i></div>
-            <div class="timer-btns">
-              <button data-phase="Think" data-seconds="60">Think 1:00</button>
-              <button data-phase="Pair" data-seconds="120">Pair 2:00</button>
-              <button data-phase="Share" data-seconds="300">Share 5:00</button>
-              <button data-reset>Reset</button>
-            </div>
-          </div>
-        </div>
-        <aside class="notes">
-          This is an experiential question; everyone has been on a team. If the room is quiet,
-          go first with your own example. Good follow-ups to have ready: "Tell me more about that."
-          "What would you say to someone who thought the co-worker team was better?" Link answers
-          back to Chen's April-vs-September comparison.
-        </aside>
-      </section>
-
-      <!-- ============================================================
-           17 · QUESTION 2
-           ============================================================ -->
-      <section class="slide question" data-title="Question 2">
-        <p class="kicker">Question 2 of 3 · When the meter joins the team</p>
-        <div class="q-layout grow">
-          <div>
-            <p class="q-context">The threat meter replaced <em>trusting teammates</em> with <em>trusting a tool</em>, and it also became a way to watch people.</p>
-            <p class="q-text">What tool in your life has taken over a job that used to depend on trust? Think read receipts, Google Docs edit history, Find My, a grade portal. How did it change the way your group treats each other?</p>
-            <div class="followups">
-              <span class="followups-label frag">Follow-ups</span>
-              <p class="frag">Where's the line between <strong>awareness</strong> and <strong>surveillance</strong>?</p>
-              <p class="frag">Convince us: would Chen's raid have lasted longer <em>without</em> the threat meter?</p>
-            </div>
-          </div>
-          <div class="timer card" data-timer>
-            <div class="timer-face"><span class="timer-phase">Ready</span><span class="timer-time">0:00</span></div>
-            <div class="timer-bar"><i></i></div>
-            <div class="timer-btns">
-              <button data-phase="Think" data-seconds="60">Think 1:00</button>
-              <button data-phase="Pair" data-seconds="120">Pair 2:00</button>
-              <button data-phase="Share" data-seconds="300">Share 5:00</button>
-              <button data-reset>Reset</button>
-            </div>
-          </div>
-        </div>
-        <aside class="notes">
-          Push past "tools are good" or "tools are bad." Chen says KTM made the raid more efficient
-          AND weakened the family feel. Both are true. If someone says the meter just made things
-          fair, ask them: "Fair to whom? Who gets called out?" Mention Raider.IO scores as the
-          modern version.
-        </aside>
-      </section>
-
-      <!-- ============================================================
-           18 · QUESTION 3
-           ============================================================ -->
-      <section class="slide question" data-title="Question 3">
-        <p class="kicker">Question 3 of 3 · Expertise school doesn't count</p>
-        <div class="q-layout grow">
-          <div>
-            <p class="q-context">Chen argues expertise comes from getting <em>access to a community</em>, which takes social and cultural capital, not from memorizing facts.</p>
-            <p class="q-text">What's something you're genuinely an expert at that school would never grade? Who or what <span class="gold">let you into</span> that community?</p>
-            <div class="followups">
-              <span class="followups-label frag">Follow-ups</span>
-              <p class="frag">If expertise depends on access, <strong>who gets left out</strong>, in games and in classrooms?</p>
-              <p class="frag">If schools took Chen seriously, what's one thing a class like this one would do differently?</p>
-            </div>
-          </div>
-          <div class="timer card" data-timer>
-            <div class="timer-face"><span class="timer-phase">Ready</span><span class="timer-time">0:00</span></div>
-            <div class="timer-bar"><i></i></div>
-            <div class="timer-btns">
-              <button data-phase="Think" data-seconds="60">Think 1:00</button>
-              <button data-phase="Pair" data-seconds="120">Pair 2:00</button>
-              <button data-phase="Share" data-seconds="300">Share 5:00</button>
-              <button data-reset>Reset</button>
-            </div>
-          </div>
-        </div>
-        <aside class="notes">
-          Expect answers like a game, a sport, cooking, a fandom, a music scene, or a job. Ask who
-          their "sponsor" was, meaning the friend or older sibling who brought them in. That's
-          social capital. This connects to the course's bigger theme of informal learning and to
-          Chen's line that we should transfer social and cultural capital, not just skills.
-        </aside>
-      </section>
-
-      <!-- ============================================================
-           19 · WRAP-UP
-           ============================================================ -->
-      <section class="slide center wrap" data-title="Wrap-up">
-        <p class="kicker">Wrapping up</p>
-        <h2>What keeps a group of experts together?</h2>
-        <p class="lede muted">One sentence, on paper or out loud. What conclusions have we drawn today?</p>
-        <blockquote class="closing">
-          <p>“The problem is that participating in the mangle of play takes work… But it also promises real triumphs and semi-virtual glory.”</p>
-          <cite>Mark Chen, <em>Leet Noobs</em></cite>
-        </blockquote>
-        <p class="thanks">Thanks! <span class="muted">/cheer</span></p>
-        <div class="refs">
-          <p>Chen, M. (2012). <em>Leet noobs: The life and death of an expert player group in World of Warcraft.</em> Peter Lang.</p>
-          <p>Finley, T. (2013, June 24). Rethinking whole class discussion. <em>Edutopia.</em></p>
-        </div>
-        <aside class="notes">
-          Close with a quick formative check: "What conclusions have we drawn?" Take two or three
-          one-sentence answers, then read the closing quote and thank everyone.
+          This is our tie-in to the assigned game. Expertise in a raid isn't one person being
+          great; it's 40 people each doing a specialized job at the same time. Keep this quick:
+          the three roles, aggro, and scarce loot are all you need for the rest of the deck.
         </aside>
       </section>
 
