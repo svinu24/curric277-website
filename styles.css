@@ -117,7 +117,7 @@ h1, h2, h3 {
   font-weight: 700;
   margin: 0;
   line-height: 1.08;
-  text-wrap: balance;
+  text-wrap: pretty;
 }
 
 h1 { font-size: 132px; letter-spacing: 0.01em; }
@@ -427,7 +427,8 @@ body.show-notes .notes-panel {
 /* ---------- Loot vote: WoW-style item tooltips ---------- */
 
 .vote-help { font-size: 26px; margin-bottom: 26px; }
-.hint-inline { font-size: 18px; opacity: 0.7; }
+.hint-inline { font-size: 18px; color: var(--muted); opacity: 0.75; }
+.tally-hint { margin: 14px 0 22px; text-align: right; }
 
 .tooltip {
   position: relative;
@@ -477,3 +478,5 @@ body.show-notes .notes-panel {
 .reveal { border-color: rgba(255, 128, 0, 0.55); }
 .reveal p { font-size: 24px; }
 .slide.revealed .loot.chen { border-color: var(--legendary); box-shadow: 0 0 30px rgba(255, 128, 0, 0.45); }
+.slide.revealed .loot.chen .item-name { color: var(--legendary); }
+.slide.revealed .loot.chen .item-type::after { content: " · Chen's raid"; color: var(--legendary); }
