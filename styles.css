@@ -705,3 +705,102 @@ body.show-notes .notes-panel {
 .big-quote p { font-size: 42px; color: var(--gold); }
 
 .beyond .card p { font-size: 23px; }
+
+/* ---------- Discussion format ---------- */
+
+.tps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.tps .card { display: grid; grid-template-columns: auto 1fr; column-gap: 22px; align-items: center; }
+.tps .num { grid-row: span 2; margin: 0; font-size: 64px; }
+.tps h3 { margin: 0; }
+.tps p { grid-column: 2; margin: 4px 0 0; font-size: 22px; color: var(--muted); }
+.stems p { font-size: 23px; font-style: italic; margin-bottom: 8px; }
+
+/* ---------- Question slides ---------- */
+
+.q-layout {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 60px;
+  align-items: start;
+  margin-top: 6px;
+}
+.q-context {
+  font-size: 25px;
+  color: var(--muted);
+  border-left: 3px solid var(--ember);
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+.q-context em { color: var(--ink); }
+.q-text {
+  font-family: var(--display);
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 34px;
+}
+.followups p { font-size: 25px; margin-bottom: 10px; padding-left: 26px; position: relative; }
+.followups p::before { content: "↳"; position: absolute; left: 0; color: var(--ember); }
+.followups-label {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ember);
+  margin-bottom: 10px;
+}
+
+/* ---------- Think / Pair / Share timer ---------- */
+
+.timer { position: sticky; top: 0; padding: 26px; }
+.timer-face { display: flex; flex-direction: column; align-items: center; margin-bottom: 16px; }
+.timer-phase {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ember);
+}
+.timer-time {
+  font-family: var(--display);
+  font-size: 92px;
+  line-height: 1.05;
+  font-variant-numeric: tabular-nums;
+}
+.timer.paused .timer-time { opacity: 0.5; }
+.timer.done .timer-time { color: var(--yell); animation: pulse 0.9s ease-in-out 3; }
+@keyframes pulse { 50% { transform: scale(1.08); } }
+
+.timer-bar { height: 8px; border-radius: 99px; background: rgba(255, 255, 255, 0.07); overflow: hidden; margin-bottom: 20px; }
+.timer-bar i {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--gold), var(--ember));
+  transition: width 0.25s linear;
+}
+.timer-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.timer-btns button {
+  font: inherit;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 12px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--ink);
+  cursor: pointer;
+}
+.timer-btns button:hover { border-color: var(--gold); color: var(--gold); }
+.timer-btns button.on { background: rgba(255, 106, 43, 0.16); border-color: var(--ember); color: var(--ember); }
+.timer-btns [data-reset] { color: var(--muted); }
+
+/* ---------- Wrap-up ---------- */
+
+.wrap h2 { font-size: 66px; margin-bottom: 18px; }
+.wrap .closing { max-width: 1150px; margin: 40px auto 0; text-align: left; }
+.wrap .closing p { font-size: 32px; }
+.thanks { font-family: var(--display); font-size: 44px; color: var(--gold); margin-top: 36px; }
+.refs { position: absolute; bottom: 64px; left: 110px; right: 110px; text-align: left; }
+.refs p { font-size: 16px; color: var(--muted); margin: 0 0 4px; padding-left: 2em; text-indent: -2em; }

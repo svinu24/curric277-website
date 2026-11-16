@@ -65,3 +65,69 @@
   slide.querySelector(".replay").addEventListener("click", play);
   if (slide.classList.contains("active")) play(); // page opened directly on this slide
 })();
+
+/* ---------- Think / Pair / Share timers ---------- */
+
+(() => {
+  const fmt = (s) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
+
+  document.querySelectorAll("[data-timer]").forEach((timer) => {
+    const phaseEl = timer.querySelector(".timer-phase");
+    const timeEl = timer.querySelector(".timer-time");
+    const bar = timer.querySelector(".timer-bar i");
+    const buttons = Array.from(timer.querySelectorAll("button[data-seconds]"));
+    let total = 0, left = 0, tick = null, active = null;
+
+    function render() {
+      timeEl.textContent = fmt(left);
+      bar.style.width = total ? `${((total - left) / total) * 100}%` : "0";
+    }
+
+    function stop() { clearInterval(tick); tick = null; }
+
+    function reset() {
+      stop();
+      total = left = 0;
+      active = null;
+      phaseEl.textContent = "Ready";
+      timer.classList.remove("paused", "done");
+      buttons.forEach((b) => b.classList.remove("on"));
+      render();
+    }
+
+    function run() {
+      stop();
+      timer.classList.remove("paused");
+      tick = setInterval(() => {
+        left -= 1;
+        render();
+        if (left <= 0) {
+          stop();
+          phaseEl.textContent = `${active.dataset.phase} · time!`;
+          timer.classList.add("done");
+        }
+      }, 1000);
+    }
+
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        // Clicking the running phase pauses / resumes it.
+        if (active === btn && left > 0) {
+          if (tick) { stop(); timer.classList.add("paused"); }
+          else run();
+          return;
+        }
+        active = btn;
+        total = left = Number(btn.dataset.seconds);
+        phaseEl.textContent = btn.dataset.phase;
+        timer.classList.remove("done");
+        buttons.forEach((b) => b.classList.toggle("on", b === btn));
+        render();
+        run();
+      });
+    });
+
+    timer.querySelector("[data-reset]").addEventListener("click", reset);
+    render();
+  });
+})();
