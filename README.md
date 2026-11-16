@@ -36,6 +36,6 @@ No build step or install needed. Open `index.html` in a browser, or host the fol
 
 ## Editing
 
-- Presenter names: the title slide in `index.html` (search for `Your Names Here`).
+- Presenter names: the title slide in `index.html`.
 - Speaker notes: the `<aside class="notes">` inside each slide.
 - Styles live in `styles.css`; navigation lives in `deck.js`.
