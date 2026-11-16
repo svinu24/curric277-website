@@ -691,3 +691,17 @@ body.show-notes .notes-panel {
   color: var(--muted);
 }
 .cause b { color: var(--ink); }
+
+/* ---------- Takeaways + beyond ---------- */
+
+.takeaways {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+.takeaways .card { padding: 24px 22px; }
+.takeaways .card p { font-size: 22px; line-height: 1.4; }
+.big-quote { margin-top: 44px; }
+.big-quote p { font-size: 42px; color: var(--gold); }
+
+.beyond .card p { font-size: 23px; }
