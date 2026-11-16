@@ -63,7 +63,7 @@
   slide.addEventListener("slide:enter", play);
   slide.addEventListener("slide:leave", stop);
   slide.querySelector(".replay").addEventListener("click", play);
-  if (slide.classList.contains("active")) play(); // page opened directly on this slide
+  if (slide.classList.contains("active") && !document.body.classList.contains("print")) play(); // opened directly on this slide
 })();
 
 /* ---------- Think / Pair / Share timers ---------- */

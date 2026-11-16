@@ -733,13 +733,14 @@ body.show-notes .notes-panel {
 }
 .q-context em { color: var(--ink); }
 .q-text {
-  font-family: var(--display);
-  font-size: 46px;
-  font-weight: 700;
-  line-height: 1.25;
+  font-family: var(--body);
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
   margin-bottom: 34px;
 }
-.followups p { font-size: 25px; margin-bottom: 10px; padding-left: 26px; position: relative; }
+.followups p { font-size: 25px; margin-bottom: 10px; padding-left: 36px; position: relative; }
 .followups p::before { content: "↳"; position: absolute; left: 0; color: var(--ember); }
 .followups-label {
   display: block;
@@ -804,3 +805,31 @@ body.show-notes .notes-panel {
 .thanks { font-family: var(--display); font-size: 44px; color: var(--gold); margin-top: 36px; }
 .refs { position: absolute; bottom: 64px; left: 110px; right: 110px; text-align: left; }
 .refs p { font-size: 16px; color: var(--muted); margin: 0 0 4px; padding-left: 2em; text-indent: -2em; }
+
+/* ---------- Print / PDF mode (index.html?print, then Ctrl/Cmd+P) ---------- */
+
+@page { size: 1600px 900px; margin: 0; }
+
+body.print { overflow: auto; height: auto; }
+.print .viewport { position: static; display: block; background: var(--bg); }
+.print .deck { width: 1600px; height: auto; transform: none; margin: 0 auto; }
+.print .slide {
+  position: relative;
+  height: 900px;
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition: none;
+  break-after: page;
+  background:
+    radial-gradient(ellipse 80% 55% at 50% 115%, rgba(255, 106, 43, 0.22), transparent 70%),
+    var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+.print .frag { opacity: 1; transform: none; }
+.print .progress, .print .hud, .print .hint, .print .notes-panel { display: none; }
+
+@media print {
+  html, body { overflow: visible; height: auto; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}

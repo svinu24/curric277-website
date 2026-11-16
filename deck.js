@@ -14,6 +14,18 @@
 
   let index = 0;
 
+  /* ---------- Print / PDF mode: index.html?print ---------- */
+
+  if (new URLSearchParams(location.search).has("print")) {
+    document.body.classList.add("print");
+    slides.forEach((slide) => {
+      slide.classList.add("active");
+      slide.querySelectorAll(".frag, .step").forEach((el) => el.classList.add("shown"));
+    });
+    window.Deck = { print: true, slides };
+    return;
+  }
+
   /* ---------- Scale the 1600×900 stage to the window ---------- */
 
   function fit() {
