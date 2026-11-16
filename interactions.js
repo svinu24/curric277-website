@@ -31,3 +31,36 @@
   reveal.addEventListener("step:show", () => slide.classList.add("revealed"));
   reveal.addEventListener("step:hide", () => slide.classList.remove("revealed"));
 })();
+
+/* ---------- Victory chat replay ---------- */
+
+(() => {
+  const chat = document.querySelector(".chat");
+  if (!chat) return;
+  const slide = chat.closest(".slide");
+  const lines = Array.from(chat.children);
+  let timers = [];
+
+  function stop() {
+    timers.forEach(clearTimeout);
+    timers = [];
+  }
+
+  function play() {
+    stop();
+    lines.forEach((li) => li.classList.add("pending"));
+    let t = 400;
+    lines.forEach((li, i) => {
+      // Slow down for the tense finish, speed up for the celebration.
+      t += i < 4 ? 650 : i < 15 ? 520 : 330;
+      timers.push(setTimeout(() => {
+        li.classList.remove("pending");
+        li.classList.add("pop");
+      }, t));
+    });
+  }
+
+  slide.addEventListener("slide:enter", play);
+  slide.addEventListener("slide:leave", stop);
+  slide.querySelector(".replay").addEventListener("click", play);
+})();
