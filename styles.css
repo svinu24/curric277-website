@@ -1006,3 +1006,20 @@ body.print { overflow: auto; height: auto; }
 .item-rewards { font-size: 18px; color: #cfd3e6; margin-top: 4px; }
 .item-rewards b { color: #1eff00; font-weight: 600; }
 .sense .ktm-effects li { font-size: 24px; }
+
+/* Sense 6 */
+.cite-line { font-size: 19px !important; color: var(--muted); margin-top: -4px; }
+
+/* Rebuilt definition */
+.rebuilt { display: grid; grid-template-columns: 1.15fr 1fr; gap: 50px; align-items: start; }
+.full-entry .dict-word { margin-top: 0; }
+.per { font-family: var(--body); font-size: 20px; margin-left: 8px; }
+.senses { margin: 10px 0 0; padding-left: 34px; }
+.senses li { font-size: 25px; line-height: 1.4; margin-bottom: 10px; color: var(--muted); }
+.senses li::marker { color: var(--ember); font-weight: 700; }
+.senses b { font-family: var(--display); color: var(--gold); font-size: 27px; }
+.rebuilt .chips { margin: 12px 0 24px; }
+.compare-prompt { font-size: 27px; }
+
+/* Wrap-up */
+.wrap-sentence { font-size: 56px; margin: 6px 0 10px; }
