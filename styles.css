@@ -355,21 +355,6 @@ body.show-notes .notes-panel {
 
 /* ---------- Summary slide components ---------- */
 
-.boss-yell {
-  font-family: var(--display);
-  font-size: 30px;
-  font-weight: 700;
-  color: var(--yell);
-  text-shadow: 0 0 22px rgba(255, 64, 64, 0.45);
-  margin: 6px 0 22px;
-}
-.punchline {
-  font-family: var(--display);
-  font-size: 40px;
-  color: var(--ember);
-}
-.poll { align-self: center; }
-
 .stat { text-align: left; }
 .stat p { font-size: 22px; color: var(--muted); }
 .stat p strong { color: var(--ink); }
@@ -616,49 +601,7 @@ body.show-notes .notes-panel {
 .chat li.yell { color: var(--yell); }
 .chat li.sys { color: var(--system); }
 
-/* ---------- Chapter 4: timeline + comparison ---------- */
-
-.timeline {
-  list-style: none;
-  margin: 10px 0 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 26px;
-  position: relative;
-}
-.timeline::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 15px;
-  height: 3px;
-  background: linear-gradient(90deg, var(--gold), var(--ember), var(--yell));
-  opacity: 0.55;
-}
-.timeline li { position: relative; padding-top: 52px; }
-.timeline li::before {
-  content: "";
-  position: absolute;
-  top: 6px;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  transform: rotate(45deg);
-  background: var(--bg);
-  border: 3px solid var(--gold);
-}
-.timeline li.hot::before { border-color: var(--yell); background: var(--yell); box-shadow: 0 0 18px var(--yell); }
-.timeline .when {
-  display: block;
-  font-family: var(--display);
-  font-size: 30px;
-  color: var(--gold);
-  margin-bottom: 12px;
-}
-.timeline li.hot .when { color: #ff7a7a; }
-.timeline p { font-size: 24px; }
+/* ---------- Comparison cards + cause chips ---------- */
 
 .compare .card { padding-top: 24px; }
 .compare .card p { font-size: 25px; }
@@ -691,20 +634,6 @@ body.show-notes .notes-panel {
   color: var(--muted);
 }
 .cause b { color: var(--ink); }
-
-/* ---------- Takeaways + beyond ---------- */
-
-.takeaways {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
-}
-.takeaways .card { padding: 24px 22px; }
-.takeaways .card p { font-size: 22px; line-height: 1.4; }
-.big-quote { margin-top: 44px; }
-.big-quote p { font-size: 42px; color: var(--gold); }
-
-.beyond .card p { font-size: 23px; }
 
 /* ---------- Discussion format ---------- */
 
