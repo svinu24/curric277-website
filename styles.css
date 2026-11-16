@@ -312,3 +312,43 @@ body.clean-mode .hud { opacity: 0; pointer-events: none; }
   font-size: 22px;
 }
 .ink { color: var(--ink); }
+
+/* ---------- Speaker notes panel (toggle with N) ---------- */
+
+.slide .notes { display: none; }
+
+.notes-panel {
+  position: fixed;
+  left: 50%;
+  bottom: 56px;
+  width: min(900px, calc(100vw - 32px));
+  max-height: 34vh;
+  overflow: auto;
+  transform: translate(-50%, 20px);
+  opacity: 0;
+  pointer-events: none;
+  padding: 18px 22px;
+  background: rgba(12, 8, 6, 0.94);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--ink);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 30;
+}
+body.show-notes .notes-panel {
+  opacity: 1;
+  transform: translate(-50%, 0);
+  pointer-events: auto;
+}
+.notes-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ember);
+  margin-bottom: 6px;
+}
